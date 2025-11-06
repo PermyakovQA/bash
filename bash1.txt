@@ -1,0 +1,42 @@
+cd ~                                # открыть домашнюю директорию
+
+pwd                                 # определить имя папки
+
+mkdir test1                         # создать каталог test1
+
+cd test1                            # перейти в test1
+
+touch 1 2 3                         # создать файлы 1,2,3
+
+ls                                  # проверить содержимое test1
+
+cd ~                                # перейти в домашнюю директорию
+
+mkdir test2                         # создать test2
+
+rmdir test2                         # удалить test2
+
+rm test1/2                          # удалить файл 2 в test1
+
+mkdir test3                         # создать test3 и два файла в ней
+touch test3/f1 test3/f2
+
+rm -r test3                         # удалить test3 
+
+mkdir test4                         # создать test4
+
+mv test1/1 test1/3 test4            # переместить 1 и 3 из test1 в test4
+
+echo "line" >> test4/1              # добавить в файл 1 три строки со словом "line"
+echo "line" >> test4/1
+echo "line" >> test4/1
+
+cat test4/1                         # показать содержимое 1
+
+echo "line" >> test4/3              # добавить в файл 3 три строки со словом "line"
+echo "line" >> test4/3
+echo "line" >> test4/3
+
+cat test4/1 test4/3                 # показать 1 и 3 сразу
+
+sed -i 's/.*/newtext/' test4/1      # заменить все строки в файле 1 (пример: заменить на текст newtext)
